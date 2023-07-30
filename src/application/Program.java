@@ -17,9 +17,15 @@ public class Program {
 		Seller seller = sellerDao.findById(3);		
 		System.out.println(seller);
 		
-		System.out.println("\n===TEST 1: Seller findByDepartment===");
+		System.out.println("\n===TEST 2: Seller findByDepartment===");
 		Department department = new Department(2, null);  //Segundo argumento nulo, pois não precisa no teste
 		List<Seller> list = sellerDao.findByDepartment(department);
+		for (Seller obj : list) {
+			System.out.println(obj);
+		}
+		
+		System.out.println("\n===TEST 2: Seller findAll===");
+		list = sellerDao.findAll();
 		for (Seller obj : list) {
 			System.out.println(obj);
 		}
